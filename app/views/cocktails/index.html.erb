@@ -1,6 +1,7 @@
 
 <nav class="navbar navbar-light ">
   <span class="navbar-brand mb-0 h1">Cocktails</span>
+  <%= link_to 'Create a new cocktail', new_cocktail_path, class: "btn btn-outline-secondary"  %>
 </nav>
 
 <div class="container">
@@ -12,7 +13,6 @@
     <% end %>
   </div>
 
-<%= link_to 'Create a new cocktail', new_cocktail_path, class: "btn btn-outline-secondary"  %>
 
 </div>
 
