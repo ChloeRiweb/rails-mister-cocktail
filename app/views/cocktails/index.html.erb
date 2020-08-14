@@ -5,15 +5,15 @@
 </nav>
 
 <div class="container">
-  <div class="cards d-flex justify-content-around align-items-center">
-    <% @cocktails.each do |cocktail| %>
-        <div class="card-category flex-grow-1" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1560963689-b5682b6440f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1372&q=80)">
-          <%= link_to cocktail.name, cocktail_path(cocktail)  %>
-        </div>
-    <% end %>
+  <div class="row">
+    <div class="cards d-flex justify-content-around align-items-center">
+      <% @cocktails.each do |cocktail| %>
+          <div class="card-category flex-grow-1" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1560963689-b5682b6440f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1372&q=80)">
+            <%= link_to cocktail.name, cocktail_path(cocktail)  %>
+          </div>
+      <% end %>
+    </div>
   </div>
-
-
 </div>
 
 <!-- <div class="card-product">
