@@ -4,11 +4,15 @@
   <%= link_to 'Create a new cocktail', new_cocktail_path, class: "btn btn-outline-secondary"  %>
 </nav>
 
+<!-- prends des ids de collection cocktails sur unsplash, et ensuite on fait un .sample sur le link -->
+<% photo_ids_arr = ['1990254','2469482','9619837','10496179','9604700','4485117','9147894'] %>
+
 <div class="container 100vh">
   <div class="row">
+
     <% @cocktails.each do |cocktail| %>
       <div class="col-12 col-md-6 col-lg-3">
-        <div class="card-category m-2" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1560963689-b5682b6440f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1372&q=80)">
+        <div class="card-category m-2" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://source.unsplash.com/collection/<%= photo_ids_arr.sample %>')">
           <%= link_to cocktail.name, cocktail_path(cocktail)  %>
         </div>
       </div>
@@ -18,14 +22,13 @@
 
 <div class="footer card-footer">
   <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
+    Follow us
     <a href="#"><i class="fab fa-instagram"></i></a>
     <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
   </div>
   <div class="footer-copyright">
-    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+    Cocktail mania 2020. made with <i class="fas fa-heart"></i> !
   </div>
 </div>
 <!-- <p><%#= cl_image_tag("xpreu0maohhmrlovh4eo", alt: "boris", width: 400, height: 300, crop: :fill) %></p> -->
+<!-- url('<%#= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill %>') -->
